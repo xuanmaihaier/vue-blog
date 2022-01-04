@@ -1,6 +1,7 @@
 module.exports = {
   "title": "stride.blog",
   "description": "你假装努力的样子真的很狼狈",
+  "base" : '/vue-blog/',
   "dest": "public",
   "head": [
     [
