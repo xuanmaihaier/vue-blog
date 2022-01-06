@@ -718,7 +718,7 @@ diff --git a/node_modules/vuepress-theme-reco/images/but.jpg b/node_modules/vuep
 new file mode 100644
 index 0000000..e69de29
 diff --git a/node_modules/vuepress-theme-reco/styles/theme.styl b/node_modules/vuepress-theme-reco/styles/theme.styl
-index a773b0b..5773ac9 100644
+index a773b0b..c5d0ba4 100644
 --- a/node_modules/vuepress-theme-reco/styles/theme.styl
 +++ b/node_modules/vuepress-theme-reco/styles/theme.styl
 @@ -13,7 +13,7 @@ body
@@ -730,7 +730,7 @@ index a773b0b..5773ac9 100644
  
  .page, .password-wrapper-in
    overflow-x: hidden
-@@ -27,7 +27,11 @@ body
+@@ -27,14 +27,18 @@ body
    right 0
    height $navbarHeight
    box-sizing border-box
@@ -743,3 +743,21 @@ index a773b0b..5773ac9 100644
  .sidebar-mask
    position fixed
    z-index 9
+   top 0
+   left 0
+-  width 100vw
+-  height 100vh
++  right 0
++  bottom: 0
+   display none
+   background-color: rgba(0,0,0,.65);
+ 
+@@ -43,7 +47,7 @@ body
+   background-color var(--background-color)
+   width $sidebarWidth
+   position fixed
+-  z-index 10
++  z-index 100
+   margin 0
+   top $navbarHeight
+   left 0
