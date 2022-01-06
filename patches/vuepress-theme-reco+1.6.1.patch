@@ -12,21 +12,9 @@ index 2d1bb93..0087a61 100644
  
        <transition name="fade">
 diff --git a/node_modules/vuepress-theme-reco/components/Footer.vue b/node_modules/vuepress-theme-reco/components/Footer.vue
-index a9f0d44..230ccd7 100644
+index a9f0d44..00bcec6 100644
 --- a/node_modules/vuepress-theme-reco/components/Footer.vue
 +++ b/node_modules/vuepress-theme-reco/components/Footer.vue
-@@ -1,9 +1,9 @@
- <template>
-   <div class="footer-wrapper">
--    <span>
-+    <!-- <span>
-       <reco-icon icon="reco-theme" />
-       <a target="blank" href="https://vuepress-theme-reco.recoluan.com">{{`vuepress-theme-reco@${version}`}}</a>
--    </span>
-+    </span> -->
-     <span v-if="$themeConfig.record">
-       <reco-icon icon="reco-beian" />
-       <a :href="$themeConfig.recordLink || '#'">{{ $themeConfig.record }}</a>
 @@ -11,20 +11,20 @@
      <span>
        <reco-icon icon="reco-copyright" />
