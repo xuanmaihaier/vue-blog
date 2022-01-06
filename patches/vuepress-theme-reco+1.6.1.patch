@@ -717,6 +717,18 @@ index 0000000..e69de29
 diff --git a/node_modules/vuepress-theme-reco/images/but.jpg b/node_modules/vuepress-theme-reco/images/but.jpg
 new file mode 100644
 index 0000000..e69de29
+diff --git a/node_modules/vuepress-theme-reco/styles/mobile.styl b/node_modules/vuepress-theme-reco/styles/mobile.styl
+index cb44a7d..95d985e 100644
+--- a/node_modules/vuepress-theme-reco/styles/mobile.styl
++++ b/node_modules/vuepress-theme-reco/styles/mobile.styl
+@@ -14,7 +14,6 @@ $mobileSidebarWidth = $sidebarWidth * 0.82
+ @media (max-width: $MQMobile)
+   .sidebar
+     top 0
+-    padding-top $navbarHeight
+     transform translateX(-100%)
+     transition transform .2s ease
+   .page, .password-wrapper-in
 diff --git a/node_modules/vuepress-theme-reco/styles/theme.styl b/node_modules/vuepress-theme-reco/styles/theme.styl
 index a773b0b..c5d0ba4 100644
 --- a/node_modules/vuepress-theme-reco/styles/theme.styl
