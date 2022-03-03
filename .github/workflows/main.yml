@@ -19,7 +19,10 @@ jobs:
         # 使用action库  actions/setup-node安装node
         uses: actions/setup-node@v1
         with:
-          yarn-version: 1.22.0
+          yarn-version: 1.22.10
+      # 忽略版本
+      - name: yarn set config
+      - run: yarn config set ignore-engines true
       # 安装依赖
       - name: yarn install
         run: yarn install
