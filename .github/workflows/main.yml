@@ -22,7 +22,7 @@ jobs:
           yarn-version: 1.22.10
       # 忽略版本
       - name: yarn set config
-      - run: yarn config set ignore-engines true
+        run: yarn config set ignore-engines true
       # 安装依赖
       - name: yarn install
         run: yarn install
