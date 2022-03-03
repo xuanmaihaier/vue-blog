@@ -15,11 +15,11 @@ jobs:
         # 使用action库  actions/checkout获取源码
         uses: actions/checkout@master
       # 安装Node13
-      - name: use yarn.js 1.22.10
+      - name: use yarn.js 10.24.1
         # 使用action库  actions/setup-node安装node
         uses: actions/setup-node@v1
         with:
-          yarn-version: 1.22.10
+          yarn-version: 10.24.1
       # 安装依赖
       - name: yarn install
         run: yarn install
