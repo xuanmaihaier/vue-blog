@@ -1,53 +1,62 @@
 module.exports = {
-  "title": "stride",
+  title: 'stride',
   // "base" : '/vue-blog/',
-  "dest": "public",
-  "head": [
+  locales: {
+    // 键名是该语言所属的子路径
+    // 作为特例，默认语言可以使用 '/' 作为其路径。
+    '/': {
+      lang: 'zh-CN', // 将会被设置为 <html> 的 lang 属性
+    },
+  },
+  dest: 'public',
+  head: [
     [
-      "link",
+      'link',
       {
-        "rel": "icon",
-        "href": "/favicon.ico"
-      }
+        rel: 'icon',
+        href: '/favicon.ico',
+      },
     ],
     [
-      "meta",
+      'meta',
       {
-        "name": "viewport",
-        "content": "width=device-width,initial-scale=1,user-scalable=no"
-      }
+        name: 'viewport',
+        content: 'width=device-width,initial-scale=1,user-scalable=no',
+      },
     ],
-    ['meta',{'name':"keywords",'content':"stide的博客"}],
-    ['meta',{'name':"author",'content':"stide"}],
+    ['meta', { name: 'keywords', content: 'stide的博客' }],
+    ['meta', { name: 'author', content: 'stide' }],
     // ['meta',{'name':"baidu-site-verification",'content':"code-FCTONeyA0K"}],
-    ['script', {}, `
+    [
+      'script',
+      {},
+      `
     var _hmt = _hmt || [];
     (function() {
     var hm = document.createElement("script");
     hm.src = "https://hm.baidu.com/hm.js?36cd8efdd1b09c468280b70d00ad8ada";
     var s = document.getElementsByTagName("script")[0]; 
     s.parentNode.insertBefore(hm, s);
-  })()`
-    ]
-    
+  })()`,
+    ],
   ],
-  'theme': 'reco',
-  "themeConfig": {
-    "nav": [
+  theme: 'reco',
+  themeConfig: {
+    nav: [
       {
-        "text": "首页",
-        "link": "/",
-        "icon": "reco-home"
+        text: '首页',
+        link: '/',
+        icon: 'reco-home',
       },
       {
-        "text": "时间轴",
-        "link": "/timeline/",
-        "icon": "reco-date"
+        text: '时间轴',
+        link: '/timeline/',
+        icon: 'reco-date',
       },
       {
-        "text": "留言板",
-        "icon": "reco-message",
-        "link": "/docs/theme-reco/commit.md"
+        text: '留言板',
+        icon: 'reco-message',
+        link: '/docs/theme-reco/commit.md',
         // "items": [
         //   {
         //     "text": "vuepress-reco",
@@ -56,32 +65,33 @@ module.exports = {
         // ]
       },
       {
-        "text": "联系方式",
-        "icon": "reco-message",
-        "items": [
+        text: '联系方式',
+        icon: 'reco-message',
+        items: [
           {
-            "text": "GitHub",
-            "link": "https://github.com/xuanmaihaier",
-            "icon": "reco-github"
-          }, {
-            "text": "CSDN",
-            "link": "https://blog.csdn.net/qq_19945487",
-            "icon": "reco-csdn"
+            text: 'GitHub',
+            link: 'https://github.com/xuanmaihaier',
+            icon: 'reco-github',
           },
           {
-            "text": "抖音",
-            "link": "https://v.douyin.com/e8UKVoV/",
-            "icon": "reco-douyin"
+            text: 'CSDN',
+            link: 'https://blog.csdn.net/qq_19945487',
+            icon: 'reco-csdn',
           },
           {
-            "text": "YoungDoCui",
-            "link": 'https://weixin.qq.com/',
-            "icon": "reco-wechat"
-          }
-        ]
-      }
+            text: '抖音',
+            link: 'https://v.douyin.com/e8UKVoV/',
+            icon: 'reco-douyin',
+          },
+          {
+            text: 'YoungDoCui',
+            link: 'https://weixin.qq.com/',
+            icon: 'reco-wechat',
+          },
+        ],
+      },
     ],
-    "sidebar": {
+    sidebar: {
       // "/docs/theme-reco/": [
       //   "",
       //   "theme",
@@ -89,16 +99,16 @@ module.exports = {
       //   "api"
       // ]
     },
-    "type": "blog",
-    "blogConfig": {
-      "category": {
-        "location": 2,
-        "text": "分类"
+    type: 'blog',
+    blogConfig: {
+      category: {
+        location: 2,
+        text: '分类',
       },
-      "tag": {
-        "location": 3,
-        "text": "标签"
-      }
+      tag: {
+        location: 3,
+        text: '标签',
+      },
     },
     // "friendLink": [
     //   {
@@ -115,61 +125,72 @@ module.exports = {
     //   }
     // ],
     // "logo": "/logo.png",
-    "search": true,
-    "searchMaxSuggestions": 10,
-    "lastUpdated": "Last Updated",
-    "author": "stride",
-    "authorAvatar": "/avatar.jpeg",
-    "startYear": "2020",
+    search: true,
+    searchMaxSuggestions: 10,
+    lastUpdated: 'Last Updated',
+    author: 'stride',
+    authorAvatar: '/avatar.jpeg',
+    startYear: '2020',
     // 备案
-    'record': '苏ICP备2021007111号-1',
-    'recordLink': 'https://beian.miit.gov.cn/',
-    'cyberSecurityRecord': '苏公网安备 32011402010859号',
-    'cyberSecurityLink': 'http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32011402010859',
+    record: '苏ICP备2021007111号-1',
+    recordLink: 'https://beian.miit.gov.cn/',
+    cyberSecurityRecord: '苏公网安备 32011402010859号',
+    cyberSecurityLink:
+      'http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32011402010859',
   },
-  "markdown": {
-    "lineNumbers": true
+  markdown: {
+    lineNumbers: true,
   },
-  "plugins": [
-    ["sakura", {
-      num: 20,  // 默认数量
-      show: true, //  是否显示
-      zIndex: 0,   // 层级
-      img: {
-        replace: false,  // false 默认图 true 换图 需要填写httpUrl地址
-        httpUrl: '...'     // 绝对路径
-      }
-    }],
+  plugins: [
     [
-      "@vuepress-reco/comments",
+      'sakura',
+      {
+        num: 4, // 默认数量
+        show: true, //  是否显示
+        zIndex: 0, // 层级
+        img: {
+          replace: false, // false 默认图 true 换图 需要填写httpUrl地址
+          httpUrl: '...', // 绝对路径
+        },
+      },
+    ],
+    [
+      'cursor-effects',
+      // {
+      //   size: 2, // size of the particle, default: 2
+      //   shape: ['star' | 'circle'], // shape of the particle, default: 'star'
+      //   zIndex: 999999999, // z-index property of the canvas, default: 999999999
+      // },
+    ],
+    [
+      '@vuepress-reco/comments',
       {
         solution: 'valine',
         options: {
           appId: 'wJBYwlHhL0WemskTB3g82D24-gzGzoHsz',
           appKey: '7M9gB0WRmYttxp82yI5UlJqD',
-        }
-      }
+        },
+      },
     ],
     [
-      "meting",
+      'meting',
       {
         meting: {
-          server: "tencent", // netease:网易云，tencent:qq音乐，xiami:虾米音乐
-          type: "playlist",
-          auto: 'https://y.qq.com/n/yqq/playlist/7929054944.html'
+          server: 'tencent', // netease:网易云，tencent:qq音乐，xiami:虾米音乐
+          type: 'playlist',
+          auto: 'https://y.qq.com/n/yqq/playlist/7929054944.html',
         },
         aplayer: {
           autoplay: true,
           mini: true,
           theme: '#282c34',
-          preload: 'metadata'
+          preload: 'metadata',
         },
         mobile: {
           cover: false,
-          lrc: true
-        }
-      }
+          lrc: true,
+        },
+      },
     ],
-  ]
-
+  ],
 }
