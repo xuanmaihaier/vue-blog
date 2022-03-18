@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'stride',
+  title: 'YoungDo',
   // "base" : '/vue-blog/',
   locales: {
     // 键名是该语言所属的子路径
@@ -128,7 +128,7 @@ module.exports = {
     search: true,
     searchMaxSuggestions: 10,
     lastUpdated: 'Last Updated',
-    author: 'stride',
+    author: 'YoungDo',
     authorAvatar: '/avatar.jpeg',
     startYear: '2020',
     // 备案
