@@ -207,10 +207,15 @@ module.exports = {
     [
       'meting',
       {
+        // meting: {
+        //   server: 'tencent', // netease:网易云，tencent:qq音乐，xiami:虾米音乐
+        //   type: 'playlist',
+        //   auto: 'https://y.qq.com/n/yqq/playlist/7929054944.html',
+        // },
         meting: {
-          server: 'tencent', // netease:网易云，tencent:qq音乐，xiami:虾米音乐
+          server: 'netease', // netease:网易云，tencent:qq音乐，xiami:虾米音乐
           type: 'playlist',
-          auto: 'https://y.qq.com/n/yqq/playlist/7929054944.html',
+          mid: '6662286334',
         },
         aplayer: {
           autoplay: true,
