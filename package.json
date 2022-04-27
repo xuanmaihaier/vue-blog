@@ -18,5 +18,7 @@
     "vuepress-theme-reco": "1.6.1"
   },
   "description": "recodemo",
-  "dependencies": {}
+  "dependencies": {
+    "vuepress-plugin-sponsor": "^1.0.0"
+  }
 }

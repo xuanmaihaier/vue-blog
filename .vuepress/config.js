@@ -229,5 +229,16 @@ module.exports = {
         },
       },
     ],
+    [
+      'vuepress-plugin-sponsor',
+      {
+        theme: 'simple',
+        alipay: '/qrcode-alipay.jpg',
+        wechat: '/qrcode-wechat.jpg',
+        qq: '/qrcode-qq.jpg',
+        paypal: 'https://www.paypal.com/paypalme/YoungDoCui',
+        duration: null
+      }
+    ]
   ],
 }

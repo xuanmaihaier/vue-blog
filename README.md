@@ -15,6 +15,7 @@ bgImageStyle: {
   height: '100vh'
 }
 isShowTitleInHome: false
+showSponsor: true
 actionText: Guide
 actionLink: /views/other/guide
 features:
