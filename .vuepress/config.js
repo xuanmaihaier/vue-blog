@@ -239,6 +239,13 @@ module.exports = {
         paypal: 'https://www.paypal.com/paypalme/YoungDoCui',
         duration: null
       }
-    ]
+    ],
+    // ['vuepress-plugin-live2d-stride', {
+    //    model: "/model/3__l2d_31.u.model3.json",
+    //    containerStyle:{
+    //     height:'600px',
+    //     width:'600px',
+    //   },
+    //  }]
   ],
 }
