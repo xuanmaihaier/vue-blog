@@ -239,6 +239,9 @@ module.exports = {
         paypal: 'https://www.paypal.com/paypalme/YoungDoCui',
         duration: null
       }
+    ],
+    ['vuepress-plugin-pixi-live2d-display', 
+    { model: "/lar/lar.model3.json" }
     ]
   ],
 }
