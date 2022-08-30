@@ -55,7 +55,7 @@ module.exports = {
       },
       {
         text: '留言板',
-        icon: 'reco-message',
+        icon: 'reco-suggestion',
         link: '/docs/theme-reco/commit.md',
         // "items": [
         //   {
@@ -63,6 +63,11 @@ module.exports = {
 
         //   }
         // ]
+      },
+      {
+        text: '组件库',
+        link: 'https://element.stride.fun/',
+        icon: 'reco-github',
       },
       {
         text: '联系方式',
@@ -239,13 +244,6 @@ module.exports = {
         paypal: 'https://www.paypal.com/paypalme/YoungDoCui',
         duration: null
       }
-    ],
-    // ['vuepress-plugin-live2d-stride', {
-    //    model: "/model/3__l2d_31.u.model3.json",
-    //    containerStyle:{
-    //     height:'600px',
-    //     width:'600px',
-    //   },
-    //  }]
+    ]
   ],
 }
