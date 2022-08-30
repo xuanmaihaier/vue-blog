@@ -19,7 +19,7 @@
   },
   "description": "recodemo",
   "dependencies": {
-    "vuepress-plugin-pixi-live2d-display": "^1.0.1",
+    "vuepress-plugin-live2d-stride": "^1.1.0",
     "vuepress-plugin-sponsor": "^1.0.0"
   }
 }
