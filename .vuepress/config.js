@@ -89,7 +89,7 @@ module.exports = {
             icon: 'reco-douyin',
           },
           {
-            text: 'YoungDoCui',
+            text: 'YoungDo_',
             link: 'https://weixin.qq.com/',
             icon: 'reco-wechat',
           },
@@ -241,7 +241,7 @@ module.exports = {
         alipay: '/qrcode-alipay.jpg',
         wechat: '/qrcode-wechat.jpg',
         qq: '/qrcode-qq.jpg',
-        paypal: 'https://www.paypal.com/paypalme/YoungDoCui',
+        paypal: 'https://www.paypal.com/paypalme/YoungDo_',
         duration: null
       }
     ]
