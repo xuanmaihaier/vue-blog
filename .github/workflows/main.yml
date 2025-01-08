@@ -43,15 +43,15 @@ jobs:
           git remote add origin https://github.com/${{ github.repository }}.git
           
           # 配置 git 用户
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
+          git config user.name "xuanmaihaier"
+          git config user.email "xuanmaihaier@github.com"
           
           # 添加所有文件并提交
           git add -A
           git commit -m "Deploy to GitHub Pages"
           
           # 强制推送到 gh-pages 分支
-          git push -f origin master:gh-pages  # 这会将 public 目录内容推送到 gh-pages 分支
+          git push -f https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git master:gh-pages
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 自动提供的 GitHub Token，用于身份验证
