@@ -14,11 +14,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # 安装 Node.js
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+       #安装Node13
+      - name: use Node.js 12.14.1
+        # 使用action库  actions/setup-node安装node
+        uses: actions/setup-node@v1
         with:
-          node-version: '16'  # 选择合适的 Node.js 版本
+          node-version: 12.14.1
+      
+      # 安装依赖
+      - name: npm install
+        run: npm install
 
       # 安装依赖
       - name: Install dependencies
