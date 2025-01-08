@@ -1,58 +1,52 @@
-name: Build app and deploy to aliyun
+name: Build app and deploy to GitHub Pages
+
 on:
-  #监听push操作
   push:
     branches:
-      # master分支，你也可以改成其他分支
-      - master
+      - master  # 监听 master 分支的推送事件
+
 jobs:
   build:
-    # runs-on 指定job任务运行所需要的虚拟机环境(必填字段)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # 运行环境是 Ubuntu
+
     steps:
       # 获取源码
-      - name: Checkout
-        # 使用action库  actions/checkout获取源码
-        uses: actions/checkout@master
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      #安装Node13
-      - name: use Node.js 12.14.1
-        # 使用action库  actions/setup-node安装node
-        uses: actions/setup-node@v1
+      # 安装 Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: 12.14.1
+          node-version: '16'  # 选择合适的 Node.js 版本
+
       # 安装依赖
-      - name: npm install
+      - name: Install dependencies
         run: npm install
 
-      # # 安装Yarn
-      # - name: use yarn.js 1.22.10
-      #   # 使用action库  actions/setup-node安装node
-      #   uses: actions/setup-node@v1
-      #   with:
-      #     yarn-version: 1.22.10
-      # # 忽略版本
-      # - name: yarn set config
-      #   run: yarn config set ignore-engines true
-      # # 安装依赖
-      # - name: yarn install
-      #   run: yarn install
-        # 打包
-      - name: npm build
-        run: npm run build
-      # 部署到阿里云
-      - name: Deploy to Aliyun
-        uses: easingthemes/ssh-deploy@v2.1.1
+      # 打包
+      - name: Build the project
+        run: npm run build  # 根据你的项目配置构建静态文件，假设输出目录为 public 或 dist
+
+      # 推送构建文件到 gh-pages 分支
+      - name: Deploy to GitHub Pages
+        run: |
+          cd public
+          
+          # 初始化 git 仓库
+          git init
+          git remote add origin https://github.com/${{ github.repository }}.git
+          
+          # 配置 git 用户
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          
+          # 添加所有文件并提交
+          git add -A
+          git commit -m "Deploy to GitHub Pages"
+          
+          # 强制推送到 gh-pages 分支
+          git push -f origin master:gh-pages  # 这会将 public 目录内容推送到 gh-pages 分支
+
         env:
-          # 私钥
-          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-          # scp参数
-          ARGS: "-avzr --delete"
-          # 源目录，编译后生成的文件目录
-          SOURCE: "./public"
-          # 服务器ip：换成你的服务器IP
-          REMOTE_HOST: "139.196.145.239"
-          # 用户
-          REMOTE_USER: "root"
-          # 目标地址 你在服务器上部署代码的地方
-          TARGET: "/www/blog"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 自动提供的 GitHub Token，用于身份验证
