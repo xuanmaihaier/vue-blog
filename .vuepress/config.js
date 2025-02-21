@@ -32,6 +32,19 @@ module.exports = {
       'script',
       {},
       `
+      (function(){
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    `
+    ],
+    [
+      'script',
+      {},
+      `
     var _hmt = _hmt || [];
     (function() {
     var hm = document.createElement("script");
