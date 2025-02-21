@@ -1,7 +1,7 @@
 
 module.exports = {
   title: 'YoungDo',
-  base: process.env.NODE_ENV === 'production' ? './' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/vue-blog/' : '/',
   locales: {
     // 键名是该语言所属的子路径
     // 作为特例，默认语言可以使用 '/' 作为其路径。
@@ -28,19 +28,6 @@ module.exports = {
     ['meta', { name: 'keywords', content: 'stide的博客' }],
     ['meta', { name: 'author', content: 'stide' }],
     // ['meta',{'name':"baidu-site-verification",'content':"code-FCTONeyA0K"}],
-    [
-      'script',
-      {},
-      `
-      (function(){
-        var redirect = sessionStorage.redirect;
-        delete sessionStorage.redirect;
-        if (redirect && redirect != location.href) {
-          history.replaceState(null, null, redirect);
-        }
-      })();
-    `
-    ],
     [
       'script',
       {},
